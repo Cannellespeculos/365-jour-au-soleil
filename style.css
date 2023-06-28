@@ -18,24 +18,26 @@ body {
   background-color: var(--light-blue-bkg);
   align-items: center;
   width: 100vw;
-  height: 100vh;
+
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-color: var(--blue-bkg);
   width: 100%;
   height: 100px;
+  margin-bottom: 5vh;
 
 }
+
+
 
 nav {
   width: 100%;
   height: 50px;
-  margin-bottom: 5vh;
+
 }
 
 nav ul {
@@ -53,12 +55,17 @@ ul li {
   list-style: none;
 }
 
+nav li a {
+  display: none;
+}
+
 a {
   text-decoration: none;
 
 }
 
-h1 {
+h1,
+footer h2 {
   display: flex;
   align-self: center;
   font-family: "Nosifer", cursive;
@@ -66,14 +73,17 @@ h1 {
   text-align: center;
 }
 
-a {
+/* a {
   width: 20%;
   height: 100%;
   float: left;
-}
+} */
 
 a img {
-  height: 80%;
+  height: 50px;
+  position: absolute;
+  left: 20px;
+  top: 5px;
 }
 
 nav i {
@@ -88,15 +98,20 @@ main {
   width: 90%;
 }
 
+main section li {
+  width: 40%;
+}
+
 main section ul li article {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 90%;
-  height: 150px;
-  padding: 20px;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
   box-shadow: 2px 21px 0px rgb(14 66 89 / 45%);
+  border-radius: 5%;
 }
 
 section li article p {
@@ -104,35 +119,208 @@ section li article p {
   flex-direction: row;
 }
 
+section li article img {
+  width: 40%;
+}
+
 section {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
+  margin: 0 0 30px 0;
 }
 
 section ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 
 aside {
   background-color: white;
   width: 60%;
-  margin: 0 40px 0 0;
+  margin: 0 20px 0 0;
   box-shadow: 2px 21px 0px rgb(14 66 89 / 45%);
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
 }
 
 section nav {
   display: flex;
   flex-direction: column;
+  height: auto;
+  gap: 30px;
+
+}
+
+section nav a {
+  color: black;
 }
 
 
+
+p span {
+  color: #ff0202;
+  position: relative;
+
+}
+
+p span::after {
+  content: "°";
+  position: absolute;
+  transform: translate(2px, -2px);
+
+}
+
+p span:nth-child(2) {
+  color: #30a8f0;
+}
+
+h3,
+h4,
+p,
+a,
+span,
+button {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+}
+
+p span small {
+  transform: translate(-2px, 2px);
+}
 
 
 section li:nth-child(10),
 section li:nth-child(9) {
   display: none;
+}
+
+section:nth-child(2) ul {
+  width: 55%;
+}
+
+section:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+section:nth-child(2) ul li img {
+  width: 100%;
+}
+
+section:nth-child(2) article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 5%;
+  width: 50%;
+  padding: 30px 30px 100px;
+  height: 100%;
+  text-align: center;
+  gap: 10px;
+}
+
+section:nth-child(2) article h3,
+p {
+  margin: 0 0 10px;
+}
+
+input {
+  width: 90%;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 34px 1px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 1px 1px 34px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 1px 1px 34px 1px rgba(0, 0, 0, 0.54);
+}
+
+section:nth-child(2) p {
+  text-transform: lowercase;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px 30px;
+  background-color: #096D93;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--blue-bkg);
+  padding: 50px;
+  width: 100%;
+}
+
+hr {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  hr {
+    display: block;
+    background-image: url(img/beach-1852945_1920.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 300px;
+    border: none;
+    margin-bottom: 10vh;
+  }
+
+  nav li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+  }
+
+  section li:nth-child(10),
+  section li:nth-child(9) {
+    display: block;
+  }
+
+  main section ul {
+    width: 90%;
+  }
+
+  aside {
+    width: 20%;
+    margin: 0;
+
+  }
+
+  aside nav {
+    gap: 12px;
+  }
+
+  main section ul {
+    gap: 15px;
+  }
+
+  section:nth-child(1) {
+    align-items: flex-end;
+  }
+
+  section:nth-child(1) #prévisions li {
+    width: 18%;
+  }
+
+  main section ul li article {
+    margin: 0;
+    height: 150px;
+  }
 }
