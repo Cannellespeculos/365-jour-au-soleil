@@ -83,7 +83,7 @@ for (let i = 0; i < meteo.length; i++) {
       <h3>${meteo[i].title_day}</h3>
       <h4>${meteo[i].title_date}</h4>
       <img src="${meteo[i].icon}"  alt="meteos icon ${i}">
-      <p>${meteo[i].temp_max} | <span>${meteo[i].temp_min}</span></p>
+      <p><span>${meteo[i].temp_max}<small>°</small></span> | <span>${meteo[i].temp_min}<small>°</small></span></p>
     </article>
   </li>
   `

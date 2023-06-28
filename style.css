@@ -89,6 +89,9 @@ main {
 }
 
 main section ul li article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   width: 90%;
   height: 150px;
@@ -121,10 +124,13 @@ aside {
   box-shadow: 2px 21px 0px rgb(14 66 89 / 45%);
 }
 
-nav {
+section nav {
   display: flex;
   flex-direction: column;
 }
+
+
+
 
 section li:nth-child(10),
 section li:nth-child(9) {
